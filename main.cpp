@@ -1,12 +1,12 @@
-#include "mainwidget.h"
+﻿#include "mainwidget.h"
 #include <QApplication>
 
-int main(int argc, char *argv[])
+int main(int argc, char *argv[])//主函数
 {
     QApplication a(argc, argv);
     MainWidget w;
 #if 1
-    w.move(0,640);//�м�ײ�
+    w.move(0,440);//中间底部
 #else
     w.move(0,0);
 #endif

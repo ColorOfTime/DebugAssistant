@@ -1,4 +1,4 @@
-#include "mainwidget.h"
+ï»¿#include "mainwidget.h"
 #include "ui_mainwidget.h"
 
 MainWidget::MainWidget(QWidget *parent) :
@@ -6,7 +6,8 @@ MainWidget::MainWidget(QWidget *parent) :
     ui(new Ui::MainWidget)
 {
     ui->setupUi(this);
-    this->setWindowTitle(QStringLiteral("µ÷ÊÔÖúÊÖ"));
+    //    this->setWindowTitle(QStringLiteral("è°ƒè¯•åŠ©æ‰‹"));//Qt5.5.1é€‚ç”¨
+    this->setWindowTitle(tr("è°ƒè¯•åŠ©æ‰‹"));
     this->setWindowFlags(Qt::FramelessWindowHint);
     ui->stackedWidget->setCurrentWidget(ui->page);
 }
@@ -126,9 +127,9 @@ void MainWidget::on_pushButtonOneKeyClose_clicked(bool)
 {
     for (int i=0; i<vecProc.count(); i++)
     {
-//        vecProc.value(i)->close();//Ö±½Ó¹Ø±Õ£¬Î´½øĞĞÎö¹¹£¿
-//        vecProc.value(i)->kill();//Í¬ÉÏ
-        vecProc.value(i)->terminate();//Îö¹¹ºó¹Ø±Õ
+//        vecProc.value(i)->close();//ç›´æ¥å…³é—­ï¼Œæœªè¿›è¡Œææ„ï¼Ÿ
+//        vecProc.value(i)->kill();//åŒä¸Š
+        vecProc.value(i)->terminate();//ææ„åå…³é—­
     }
     vecProc.clear();
 }
